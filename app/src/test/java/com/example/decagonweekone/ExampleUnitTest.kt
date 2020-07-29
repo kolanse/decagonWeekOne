@@ -17,10 +17,8 @@ class ExampleUnitTest {
 
         assertEquals(false, checkPalindrome("Maad"))
         assertEquals(true, checkPalindrome("Hannah"))
-
-
-
     }
+    
     @Test
     fun checkSentencePalindrome(){ //checks number palindrome
         assertEquals(true, checkPalindrome("Able was I ere I saw Elba") )
