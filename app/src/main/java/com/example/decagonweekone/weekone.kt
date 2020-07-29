@@ -4,17 +4,17 @@ package com.example.decagonweekone
 
 fun checkPalindrome(gotten: String): Boolean {
 
-    val re = Regex("[^A-Za-z0-9 ]") // filter out all non alphanumeric characters
+    val regex = Regex("[^A-Za-z0-9 ]") //A regex filter out all non alphanumeric characters
 
-    var modified: String = re.replace(gotten, "").replace(" ", "").toLowerCase() // clear out the space and turn all characters to lowercase
+    var modified: String = regex.replace(gotten, "").replace(" ", "").toLowerCase() // clear out the space and turn all characters to lowercase
 
-    var reversed: String = ""
+    var reversed  = ""
 
 
 
         for (n in modified.length -1 downTo 0) { //loop creates a new string that is a reversed copy of the main string
 
-         reversed += Character.toString(modified.get(n));
+         reversed += Character.toString(modified.get(n))
 
         }
 
@@ -22,7 +22,7 @@ fun checkPalindrome(gotten: String): Boolean {
             return true
         }
 
-        println(reversed)
+
 
 
 
