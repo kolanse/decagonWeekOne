@@ -1,0 +1,30 @@
+package com.example.decagonweekone
+
+
+
+fun checkPalindrome(gotten: String): Boolean {
+
+    val re = Regex("[^A-Za-z0-9 ]") // filter out all non alphanumeric characters
+
+    var modified: String = re.replace(gotten, "").replace(" ", "").toLowerCase() // clear out the space and turn all characters to lowercase
+
+    var reversed: String = ""
+
+
+
+        for (n in modified.length -1 downTo 0) { //loop creates a new string that is a reversed copy of the main string
+
+         reversed += Character.toString(modified.get(n));
+
+        }
+
+        if (modified.equals(reversed)){ //check whether reversed string is equal to the old string
+            return true
+        }
+
+        println(reversed)
+
+
+
+        return false
+    }
